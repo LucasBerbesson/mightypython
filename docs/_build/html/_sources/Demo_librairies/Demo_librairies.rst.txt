@@ -1,6 +1,6 @@
 
 Requests : super simple requests
-================================
+--------------------------------
 
 Warning: Recreational use of other HTTP libraries may result in
 dangerous side-effects, including: security vulnerabilities, verbose
@@ -30,7 +30,7 @@ depression, headaches, or even death.
 
 
 Bottle : micro framework
-========================
+------------------------
 
 Bottle is a fast, simple and lightweight WSGI micro web-framework for
 Python.
@@ -46,7 +46,7 @@ Python.
     #run(host='localhost', port=8080)
 
 Faker : generate fake data
-==========================
+--------------------------
 
 Faker is a Python package that generates fake data for
 you.\ `Documentation <https://faker.readthedocs.io/en/latest/>`__
@@ -69,7 +69,7 @@ you.\ `Documentation <https://faker.readthedocs.io/en/latest/>`__
 
 
 Jinja2 : template engine
-========================
+------------------------
 
 Jinja2 is a full featured template engine for
 Python.\ `Documentation <http://jinja.pocoo.org/docs/>`__
@@ -96,7 +96,7 @@ Python.\ `Documentation <http://jinja.pocoo.org/docs/>`__
         fh.write(result)
 
 Jupyter: interactive python notebook
-====================================
+------------------------------------
 
 | The Jupyter Notebook is an open-source web application that allows you
   to create and share documents that contain live code, equations,
@@ -104,7 +104,7 @@ Jupyter: interactive python notebook
 | `Documentation <http://jupyter.org/>`__
 
 Sphinx : beautiful python documentation
-=======================================
+---------------------------------------
 
 Easy and intelligent and beautiful python documentation.
 `Documentation <http://www.sphinx-doc.org/en/stable/>`__
@@ -118,7 +118,7 @@ syntax <https://fr.wikipedia.org/wiki/ReStructuredText>`__ - run
 ``make html``
 
 BeautifulSoup : XML and HTML parser
-===================================
+-----------------------------------
 
 A Python library for pulling data out of HTML and XML files.
 `Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`__
@@ -141,7 +141,7 @@ A Python library for pulling data out of HTML and XML files.
 
 
 XML : XML parser
-================
+----------------
 
 Simple and efficient API for parsing and creating XML data.
 `Documentation <https://docs.python.org/3.5/library/xml.etree.elementtree.html>`__
@@ -193,7 +193,7 @@ Simple and efficient API for parsing and creating XML data.
 
 
 Pandas : excel in python
-========================
+------------------------
 
 Pandas is an open source, BSD-licensed library providing
 high-performance, easy-to-use data structures and data analysis tools
@@ -369,7 +369,7 @@ language.\ `Documentation <http://pandas.pydata.org/pandas-docs/stable/>`__
 
 
 Matplotlib : Matlab-like plot
-=============================
+-----------------------------
 
 MATLAB-like plotting
 framework.\ `Documentation <http://matplotlib.org/>`__
@@ -395,7 +395,7 @@ framework.\ `Documentation <http://matplotlib.org/>`__
 
 
 Scikit learn : Machine learning
-===============================
+-------------------------------
 
 Simple and efficient tools for data mining and data analysis
 `Documentation <http://scikit-learn.org/stable/>`__
@@ -458,7 +458,7 @@ Simple and efficient tools for data mining and data analysis
 
 
 Django : the best web framework
-===============================
+-------------------------------
 
 | Django is a high-level Python Web framework that encourages rapid
   development and clean, pragmatic design.
@@ -469,27 +469,27 @@ Django : the best web framework
   `Demo <http://www.lafabriquediy.com/>`__
 
 Django REST : api builder
-=========================
+-------------------------
 
 Django REST framework is a powerful and flexible toolkit for building
 Web APIs. `Documentation <http://www.django-rest-framework.org/>`__.
 `Demo <https://spotit.fr/api/>`__
 
 Flask : advanced microframework
-===============================
+-------------------------------
 
 Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
 intentions. `Documentation <http://flask.pocoo.org/>`__
 
 Pylint : code analysis
-======================
+----------------------
 
 | Code analyisis for python `Documentation <https://www.pylint.org/>`__.
 | Check the ``passgen.py`` code by running ``pylint passgen.py`` and try
   to improve it !
 
 Pytest : tests
-==============
+--------------
 
 The pytest framework makes it easy to write small tests, yet scales to
 support complex functional testing for applications and
@@ -499,7 +499,7 @@ From your project directory simply run ``pytest`` to run all
 ``test_*.py`` files
 
 Gspread : Google spreadsheet api
-================================
+--------------------------------
 
 Google spreadsheet python API
 `Documentation <https://github.com/burnash/gspread>`__

@@ -1,9 +1,11 @@
 
-Python core modules demo
-========================
+Mighty Python
+-------------
+
+A list of python mini demos
 
 Python est simple...
-====================
+--------------------
 
 | Python est un langage simple et minimaliste.
 | C'est un langage de haut niveau.
@@ -19,12 +21,12 @@ Python est simple...
   et concises, comme Python !
 
 ...utilisé par beaucoup de monde
-================================
+--------------------------------
 
 Google, Nasa, Youtube, Dropbox, Reddit, Instagram, MIT ...
 
 ...gratuit et open source
-=========================
+-------------------------
 
 | Tout le monde peut avoir accès et contribuer à son code source et à
   ses librairies.
@@ -36,7 +38,7 @@ Google, Nasa, Youtube, Dropbox, Reddit, Instagram, MIT ...
   l'interpréteur se charge de la compilation en fonction de l'OS.
 
 ...orienté objet...si on veut
-=============================
+-----------------------------
 
 Python permet de faire de la programmation fonctionnelle et objet.
 
@@ -62,7 +64,7 @@ n’ont pas de contexte ou d’effets de bord. L’orientation objet est utile
 et même nécessaire dans de nombreux cas.
 
 ...typé dynamiquement
-=====================
+---------------------
 
 | En python les variables sont des "tags" pointant vers des objets.
   L'interpréteur se charge de deviner leur type.
@@ -77,7 +79,7 @@ et même nécessaire dans de nombreux cas.
         print("Finalement je suis une fonction")
 
 ...en kit complet
-=================
+-----------------
 
 **Enormément de librairies standards** : Expression régulières,
 génération de doc, test unitaires, threading, database, CGI, FTP, EMail,
@@ -88,7 +90,7 @@ processing, Machine learning, analyse de données, Maths, API, Images,
 Son, Geo loc, e-commerce, Dataviz, authentification, scrap ...
 
 Petit tour d'horizon
-====================
+--------------------
 
 .. code:: ipython3
 
@@ -98,7 +100,7 @@ Petit tour d'horizon
 .. parsed-literal::
 
     The Zen of Python, by Tim Peters
-
+    
     Beautiful is better than ugly.
     Explicit is better than implicit.
     Simple is better than complex.
@@ -121,7 +123,7 @@ Petit tour d'horizon
 
 
 Strings
-=======
+-------
 
 .. code:: ipython3
 
@@ -197,7 +199,7 @@ Strings
 
 
 Lists
-=====
+-----
 
 | Lists are the most versatile datatype available in Python.
 | Lists might contain items of different types, but usually the items
@@ -209,7 +211,7 @@ Lists
     colors.append("purple")
     colors = colors + ["pink"]
     colors.remove("yellow")
-
+    
     for color in colors:
         print(color)
 
@@ -274,7 +276,7 @@ Lists
 
     # key specifies a function of one argument that is used to extract a comparison key from each list element
     for color in sorted(colors, key=len):
-        print(color)
+        print(color)  
     print("--------")
     for color in sorted(["apple","banana","cherry"],key=lambda x:x[-1]):
         print(color)
@@ -314,7 +316,7 @@ Lists
     names = ["sky", "sun", "tree"]
     colors = ["blue","yellow","green"]
     for name, color in zip(names, colors):
-        print(name,"is",color)
+        print(name,"is",color)  
 
 
 .. parsed-literal::
@@ -325,7 +327,7 @@ Lists
 
 
 Tuples
-======
+------
 
 | A tuple is an immutable list.
 | Tuples are faster and safer than lists. If you’re defining a constant
@@ -348,13 +350,13 @@ Tuples
     <ipython-input-19-a531d5a9385b> in <module>()
           1 sites_a_visiter = ("google.com", "stackoverflow.com","lafabriquediy.com")
     ----> 2 sites_a_visiter.remove("google.com")
-
+    
 
     AttributeError: 'tuple' object has no attribute 'remove'
 
 
 Dicts
-=====
+-----
 
 A dictionary is an unordered set of key-value pairs.
 
@@ -362,7 +364,7 @@ A dictionary is an unordered set of key-value pairs.
 
     d = {"sky":"blue","sun":"yellow","tree":"green"}
     del d["sky"]
-
+    
     d.get("sky","black")
     for key in d:
         print(key)
@@ -400,7 +402,7 @@ A dictionary is an unordered set of key-value pairs.
 
 
 Sets
-====
+----
 
 A set is an unordered “bag” of unique values.
 
@@ -422,9 +424,9 @@ A set is an unordered “bag” of unique values.
     a_set = {2, 4, 5, 9, 12, 21, 30, 51, 76, 127, 195}
     b_set = {1, 2, 3, 5, 6, 8, 9, 12, 15, 17, 18, 21}
     # New set with elements common to the set and all others.
-    a_set.intersection(b_set)
+    a_set.intersection(b_set) 
     # new set with elements in the set that are not in the others.
-    a_set.difference(b_set)
+    a_set.difference(b_set) 
 
 
 
@@ -436,7 +438,7 @@ A set is an unordered “bag” of unique values.
 
 
 Classes
-=======
+-------
 
 .. code:: ipython3
 
@@ -450,16 +452,16 @@ Classes
         def __add__(self, other):
             "Méthode spéciale pour réutiliser le + de python"
             return Complex(self.r + other.i,self.r + other.i)
-
+        
         def __repr__(self):
             """Représentation de notre objet par l'interpréteur"""
             return "{} + i{}".format(self.r,self.i)
-
+        
         @property
         def module(self):
             """Affiche le module du nombre complexe"""
             return (math.sqrt(self.r**2+self.i**2))
-
+    
     x = Complex(3.0, -4.5)
     y = Complex(1.0, 1.0)
     z = x+y
@@ -493,10 +495,10 @@ Classes
             del self.contenu[key]
         def __contains__(self, value):
             return value in self.contenu
-
+    
     monpanier = Panier("banane,pomme")
     tonpanier = Panier("abricot,fraise")
-
+    
     len(monpanier)
     monpanier[0]
     "banane" in monpanier
@@ -515,7 +517,7 @@ Classes
 
 
 Flow control
-============
+------------
 
 If, else, while, try, except ...
 
@@ -542,7 +544,7 @@ If, else, while, try, except ...
             print('No, it is a little higher than that')
         else:
             print('No, it is a little lower than that')
-
+    
     print('Congratulations, you guessed it.')
     print('(but you do not win any prizes!)')
 
@@ -556,7 +558,7 @@ If, else, while, try, except ...
 
 
 Decorateurs
-===========
+-----------
 
 Un moyen simple de modifier le comportement « par défaut » de fonctions.
 
@@ -576,8 +578,8 @@ Un moyen simple de modifier le comportement « par défaut » de fonctions.
     def fibonacci(n):
       if n < 2: return n
       return fibonacci(n - 1) + fibonacci(n - 2)
-
-
+    
+    
     fibonacci(35)
 
 
@@ -593,7 +595,7 @@ Les merveilles de la bibliothèque standard
 ==========================================
 
 Collections
-===========
+-----------
 
 | Specialized container datatypes providing alternatives to Python’s
   general purpose built-in containers, dict, list, set, and tuple.
@@ -627,7 +629,7 @@ Collections
 
 
 Regex
-=====
+-----
 
 Les expressions régulières sont un puissant moyen de rechercher et
 d'isoler des expressions d'une chaîne de caractères.
@@ -649,7 +651,7 @@ d'isoler des expressions d'une chaîne de caractères.
 
 
 Time & Datetime
-===============
+---------------
 
 Contrôler le temps.
 `documentation <https://docs.python.org/3/library/datetime.html>`__
@@ -659,7 +661,7 @@ Contrôler le temps.
     # datetime(année, mois, jour, heure, minute, seconde, microseconde, fuseau horaire)
     import locale
     locale.setlocale(locale.LC_TIME, "fr_FR")
-
+    
     from datetime import datetime
     maintenant = datetime.now()
     print(maintenant.year, maintenant.month, maintenant.hour, maintenant.minute)
@@ -670,7 +672,7 @@ Contrôler le temps.
 .. parsed-literal::
 
     2017 4 23 25
-    Mardi 25 avril 2017 23:25:17
+    Mardi 25 avril 2017 23:25:17 
 
 
 .. code:: ipython3
@@ -689,7 +691,7 @@ Contrôler le temps.
 
 
 Random
-======
+------
 
 Générer de l'aléatoire.
 `Documentation <https://docs.python.org/3.6/library/random.html>`__
@@ -697,7 +699,7 @@ Générer de l'aléatoire.
 .. code:: ipython3
 
     import random
-    #un nombre aléatoire entre
+    #un nombre aléatoire entre 
     entier = random.randint(1, 100)
     print(entier)
     cadavre_exquis = 'Bonjour comment ça va'.split()
@@ -715,7 +717,7 @@ Générer de l'aléatoire.
 
 
 Open
-====
+----
 
 Open file and return a corresponding file object. If the file cannot be
 opened, an OSError is raised.
@@ -729,11 +731,11 @@ opened, an OSError is raised.
 .. parsed-literal::
 
     Hello world
-
+    
 
 
 Logs
-====
+----
 
 | This module defines functions and classes which implement a flexible
   event logging system for applications and libraries.
@@ -749,7 +751,7 @@ Logs
     logging.warning('And this, too')
 
 OS
-==
+--
 
 | This module provides a portable way of using operating system
   dependent functionality.
@@ -772,7 +774,7 @@ OS
         for folder in folders:
             new_name = folder.replace(' ', '_')
             os.rename(os.path.join(path, folder), os.path.join(path, new_name))
-
+    
     after = os.listdir(".")
     for before,after in zip(before,after):
         print(before,'-->',after)
@@ -800,14 +802,14 @@ OS
 
 
 JSON
-====
+----
 
 Easy to use JSON API.
 `Documentation <https://docs.python.org/3.6/library/json.html>`__
 
 .. code:: ipython3
 
-
+    
     import json
     # Json to string
     print(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
@@ -836,7 +838,7 @@ Easy to use JSON API.
 
 
 CSV
-===
+---
 
 The csv module implements classes to read and write tabular data in CSV
 format. `Documentation <https://docs.python.org/3/library/csv.html>`__
@@ -844,7 +846,7 @@ format. `Documentation <https://docs.python.org/3/library/csv.html>`__
 .. code:: ipython3
 
     import csv
-
+     
     # write file
     with open('./data/basket.csv', 'w+') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=',')
@@ -852,8 +854,8 @@ format. `Documentation <https://docs.python.org/3/library/csv.html>`__
         filewriter.writerow(['Bananas', 3])
         filewriter.writerow(['Oranges', 4])
         filewriter.writerow(['Apples', 5])
-
-
+        
+        
     # read file
     with open('./data/basket.csv', 'r+') as f:
         reader = csv.reader(f)
@@ -871,7 +873,7 @@ format. `Documentation <https://docs.python.org/3/library/csv.html>`__
 
 
 Math
-====
+----
 
 For Maths ...
 
@@ -889,7 +891,7 @@ For Maths ...
 
 
 smtplib
-=======
+-------
 
 | The smtplib module defines an SMTP client session object that can be
   used to send mail to any Internet machine with an SMTP or ESMTP
@@ -897,17 +899,17 @@ smtplib
 | `Documentation <https://docs.python.org/3.6/library/smtplib.html>`__
 
 import smtplib
-
+ 
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login("YOUR EMAIL ADDRESS", "YOUR PASSWORD")
-
+ 
 msg = "YOUR MESSAGE!"
 server.sendmail("YOUR EMAIL ADDRESS", "THE EMAIL ADDRESS TO SEND TO", msg)
 server.quit()
 
 sqlite3
-=======
+-------
 
 SQLite is a C library that provides a lightweight disk-based database
 that doesn’t require a separate server process and allows accessing the
@@ -956,3 +958,4 @@ database using a nonstandard variant of the SQL query language.
     ('2006-04-06', 'SELL', 'CHERRY', 500.0, 53.0)
     ('2006-04-05', 'BUY', 'ORANGE', 1000.0, 72.0)
     ('2006-04-05', 'BUY', 'ORANGE', 1000.0, 72.0)
+
