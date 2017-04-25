@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Set up your environment &#8212; documentation Formation Python 1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Python core modules demo" href="Demo_python.html" />
+    <link rel="prev" title="Mighty Python" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="set-up-your-environment">
+<h1>Set up your environment<a class="headerlink" href="#set-up-your-environment" title="Lien permanent vers ce titre">¶</a></h1>
+<p>To run the notebook and the examples you should have python 3 and pip installed
+on your computer.
+To check that is it the case, run in your terminal :</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">python --version</span>
+<span class="go">pip --version</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-virtualenv">
+<h1>Create a virtualenv<a class="headerlink" href="#create-a-virtualenv" title="Lien permanent vers ce titre">¶</a></h1>
+<p>A Virtual Environment (commonly referred to as a &#8216;virtualenv&#8217;) is a tool to keep
+the dependencies required by different projects in separate places, by creating
+virtual Python environments for them.</p>
+<p>This project depends on a lot of libraries so if you don&#8217;t want to destroy your
+other projects you&#8217;d better use one.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I personnaly recommand <code class="docutils literal"><span class="pre">pew</span></code> or <code class="docutils literal"><span class="pre">virtualenvwrapper</span></code></p>
+</div>
+</div>
+<div class="section" id="install-required-python-packages">
+<h1>Install required python packages<a class="headerlink" href="#install-required-python-packages" title="Lien permanent vers ce titre">¶</a></h1>
+<p>As I said there are a lot of them but if you use a virtualenv you&#8217;ll be able to
+delete all files installed in one simple command !
+Libraries are stores in requirements.txt.</p>
+<p>To install them run :</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-the-notebook">
+<h1>Launch the notebook<a class="headerlink" href="#launch-the-notebook" title="Lien permanent vers ce titre">¶</a></h1>
+<p>All examples are in the jupyter notebook (n open-source web application that
+allows you to create and share documents that contain live code, equations,
+visualizations and explanatory text).</p>
+<p>To launch the notebook simply run :</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">jupyter notebook</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Set up your environment</a></li>
+<li><a class="reference internal" href="#create-a-virtualenv">Create a virtualenv</a></li>
+<li><a class="reference internal" href="#install-required-python-packages">Install required python packages</a></li>
+<li><a class="reference internal" href="#launch-the-notebook">Launch the notebook</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="Chapitre précédent">Mighty Python</a></li>
+      <li>Next: <a href="Demo_python.html" title="Chapitre suivant">Python core modules demo</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/setup.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Lucas Berbesson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/setup.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

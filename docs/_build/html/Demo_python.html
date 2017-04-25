@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Python core modules demo &#8212; documentation Formation Python 1</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Requests : super simple requests" href="Demo_librairies/Demo_librairies.html" />
+    <link rel="prev" title="Set up your environment" href="setup.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-core-modules-demo">
+<h1>Python core modules demo<a class="headerlink" href="#python-core-modules-demo" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="python-est-simple">
+<h1>Python est simple...<a class="headerlink" href="#python-est-simple" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Python est un langage simple et minimaliste.</div>
+<div class="line">C&#8217;est un langage de haut niveau.</div>
+<div class="line">Il fait abstraction des caractéristiques techniques du matériel
+utilisé pour exécuter le programme.</div>
+<div class="line">Pas de gestion de mémoire, de processeur, de registres ... juste du
+code fonctionnel ! Un programme bien écrit se lit comme du pseudo-code
+anglais.</div>
+<div class="line">Son système d&#8217;indentation le rend très propre : pas de ; ni de {}...</div>
+<div class="line">Python est facile à apprendre, de plus en plus enseigné (lycée,
+prépa...)</div>
+<div class="line">La communauté pythonienne rédige d&#8217;excellentes documentations, claires
+et concises, comme Python !</div>
+</div>
+</div>
+<div class="section" id="utilise-par-beaucoup-de-monde">
+<h1>...utilisé par beaucoup de monde<a class="headerlink" href="#utilise-par-beaucoup-de-monde" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Google, Nasa, Youtube, Dropbox, Reddit, Instagram, MIT ...</p>
+</div>
+<div class="section" id="gratuit-et-open-source">
+<h1>...gratuit et open source<a class="headerlink" href="#gratuit-et-open-source" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Tout le monde peut avoir accès et contribuer à son code source et à
+ses librairies.</div>
+<div class="line">Permet de faire beaucoup de choses que certains logiciels payants ne
+proposent pas (Maple).</div>
+<div class="line">Python est un langage interpreté ce qui le rend très Portable :
+GNU/Linux, Windows, FreeBSD, Macintosh... Un même code source peut
+fonctionner exactement de la même manière sur toutes ces plateformes :
+l&#8217;interpréteur se charge de la compilation en fonction de l&#8217;OS.</div>
+</div>
+</div>
+<div class="section" id="oriente-objet-si-on-veut">
+<h1>...orienté objet...si on veut<a class="headerlink" href="#oriente-objet-si-on-veut" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Python permet de faire de la programmation fonctionnelle et objet.</p>
+<div class="line-block">
+<div class="line">En Python, tout est un objet, et peut être manipulé en tant que tel.</div>
+<div class="line">Les fonctions, les classes, les chaînes et même les types sont des
+objets en Python: comme tout objet ils peuvent être passés comme
+arguments de fonction, et ils peuvent avoir des méthodes et
+propriétés.</div>
+</div>
+<p>Cependant, contrairement à Java, Python n’impose pas la programmation
+orientée objet comme paradigme de programmation principal. Il est
+parfaitement viable pour un projet de Python de ne pas être orienté
+objet, à savoir de ne pas utiliser ou très peu de définitions de
+classes, d’héritage de classe, ou d’autres mécanismes qui sont
+spécifiques à la programmation orientée objet.</p>
+<p>La gestion par modules permet aux développeur d&#8217;encapsuler naturellement
+les couches d&#8217;abstractions de leur code.</p>
+<p>Les fonctions pures sont des blocs de construction plus efficaces que
+les classes et les objets pour certaines architectures parce qu’elles
+n’ont pas de contexte ou d’effets de bord. L’orientation objet est utile
+et même nécessaire dans de nombreux cas.</p>
+</div>
+<div class="section" id="type-dynamiquement">
+<h1>...typé dynamiquement<a class="headerlink" href="#type-dynamiquement" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">En python les variables sont des &#8220;tags&#8221; pointant vers des objets.
+L&#8217;interpréteur se charge de deviner leur type.</div>
+<div class="line">Pour les variables comme pour beaucoup d&#8217;autres choses, on fait
+confiance aux programmeurs pour utiliser un nommage intelligent.</div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Hello world&quot;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">def</span> <span class="nf">a</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finalement je suis une fonction&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="en-kit-complet">
+<h1>...en kit complet<a class="headerlink" href="#en-kit-complet" title="Lien permanent vers ce titre">¶</a></h1>
+<p><strong>Enormément de librairies standards</strong> : Expression régulières,
+génération de doc, test unitaires, threading, database, CGI, FTP, EMail,
+XML, HTML, Cryptography, GUI ...</p>
+<p><strong>Encore plus de libraries open source</strong> : Frameworks web, Text
+processing, Machine learning, analyse de données, Maths, API, Images,
+Son, Geo loc, e-commerce, Dataviz, authentification, scrap ...</p>
+</div>
+<div class="section" id="petit-tour-d-horizon">
+<h1>Petit tour d&#8217;horizon<a class="headerlink" href="#petit-tour-d-horizon" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+<pre class="literal-block">
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than <em>right</em> now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</pre>
+</div>
+<div class="section" id="strings">
+<h1>Strings<a class="headerlink" href="#strings" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># String format</span>
+<span class="s2">&quot;Hello my name is </span><span class="si">{}</span><span class="s2"> and I love </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello my name is Lucas and I love Python&#39;</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Named string format</span>
+<span class="s2">&quot;Hello my name is </span><span class="si">{name}</span><span class="s2"> and I&#39;m </span><span class="si">{age}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello my name is Lucas and I&#39;m 26&quot;</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># String format mini-language</span>
+<span class="s1">&#39;</span><span class="si">{:,}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1234567890</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;1,234,567,890&#39;</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Strings are iterable. So you can use iterable methods on them...</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s2">&quot;DevStudio&quot;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;abc&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;12th letter of the alphabet is :&quot;</span><span class="p">,</span><span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span><span class="p">[</span><span class="mi">12</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">9</span>
+<span class="n">a</span>
+<span class="n">b</span>
+<span class="n">c</span>
+<span class="mi">12</span><span class="n">th</span> <span class="n">letter</span> <span class="n">of</span> <span class="n">the</span> <span class="n">alphabet</span> <span class="ow">is</span> <span class="p">:</span> <span class="n">m</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello &quot;</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;Hello Hello Hello &#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Lists are the most versatile datatype available in Python.</div>
+<div class="line">Lists might contain items of different types, but usually the items
+all have the same type.</div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;purple&quot;</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">colors</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;pink&quot;</span><span class="p">]</span>
+<span class="n">colors</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;yellow&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">blue</span>
+<span class="n">green</span>
+<span class="n">purple</span>
+<span class="n">pink</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;green&quot;</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pink is color number </span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;pink&#39;</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)))</span>
+<span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kc">True</span>
+<span class="n">pink</span> <span class="ow">is</span> <span class="n">color</span> <span class="n">number</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># List comprehensions are very powerful</span>
+<span class="n">COLORS</span> <span class="o">=</span> <span class="p">[</span><span class="n">color</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">COLORS</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;BLUE&#39;</span><span class="p">,</span> <span class="s1">&#39;GREEN&#39;</span><span class="p">,</span> <span class="s1">&#39;PURPLE&#39;</span><span class="p">,</span> <span class="s1">&#39;PINK&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># enumerate works on any object that supports iteration</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">color</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="n">blue</span>
+<span class="mi">1</span> <span class="n">green</span>
+<span class="mi">2</span> <span class="n">purple</span>
+<span class="mi">3</span> <span class="n">pink</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># key specifies a function of one argument that is used to extract a comparison key from each list element</span>
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">colors</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">([</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;cherry&quot;</span><span class="p">],</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">blue</span>
+<span class="n">pink</span>
+<span class="n">green</span>
+<span class="n">purple</span>
+<span class="o">--------</span>
+<span class="n">banana</span>
+<span class="n">apple</span>
+<span class="n">cherry</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="o">=</span> <span class="s2">&quot;Bonjour je fais du Python&quot;</span>
+<span class="n">hello2</span> <span class="o">=</span> <span class="n">hello</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">hello3</span> <span class="o">=</span> <span class="s2">&quot;-&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hello2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hello3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">,</span> <span class="s1">&#39;je&#39;</span><span class="p">,</span> <span class="s1">&#39;fais&#39;</span><span class="p">,</span> <span class="s1">&#39;du&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">]</span>
+<span class="n">B</span><span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">u</span><span class="o">-</span><span class="n">r</span><span class="o">-</span> <span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="n">e</span><span class="o">-</span> <span class="o">-</span><span class="n">f</span><span class="o">-</span><span class="n">a</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="n">s</span><span class="o">-</span> <span class="o">-</span><span class="n">d</span><span class="o">-</span><span class="n">u</span><span class="o">-</span> <span class="o">-</span><span class="n">P</span><span class="o">-</span><span class="n">y</span><span class="o">-</span><span class="n">t</span><span class="o">-</span><span class="n">h</span><span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">n</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Zip makes an iterator that aggregates elements from each of the iterables.</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sky&quot;</span><span class="p">,</span> <span class="s2">&quot;sun&quot;</span><span class="p">,</span> <span class="s2">&quot;tree&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="s2">&quot;is&quot;</span><span class="p">,</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sky</span> <span class="ow">is</span> <span class="n">blue</span>
+<span class="n">sun</span> <span class="ow">is</span> <span class="n">yellow</span>
+<span class="n">tree</span> <span class="ow">is</span> <span class="n">green</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tuples">
+<h1>Tuples<a class="headerlink" href="#tuples" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">A tuple is an immutable list.</div>
+<div class="line">Tuples are faster and safer than lists. If you’re defining a constant
+set of values and all you’re ever going to do with it is iterate
+through it, use a tuple instead of a list</div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">sites_a_visiter</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;google.com&quot;</span><span class="p">,</span> <span class="s2">&quot;stackoverflow.com&quot;</span><span class="p">,</span><span class="s2">&quot;lafabriquediy.com&quot;</span><span class="p">)</span>
+<span class="n">sites_a_visiter</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;google.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="ne">AttributeError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="n">a531d5a9385b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
+      <span class="mi">1</span> <span class="n">sites_a_visiter</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;google.com&quot;</span><span class="p">,</span> <span class="s2">&quot;stackoverflow.com&quot;</span><span class="p">,</span><span class="s2">&quot;lafabriquediy.com&quot;</span><span class="p">)</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">sites_a_visiter</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;google.com&quot;</span><span class="p">)</span>
+
+
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s1">&#39;remove&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dicts">
+<h1>Dicts<a class="headerlink" href="#dicts" title="Lien permanent vers ce titre">¶</a></h1>
+<p>A dictionary is an unordered set of key-value pairs.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;sky&quot;</span><span class="p">:</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;sun&quot;</span><span class="p">:</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;tree&quot;</span><span class="p">:</span><span class="s2">&quot;green&quot;</span><span class="p">}</span>
+<span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;sky&quot;</span><span class="p">]</span>
+
+<span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sky&quot;</span><span class="p">,</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sun</span>
+<span class="n">tree</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">yellow</span>
+<span class="n">green</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sets">
+<h1>Sets<a class="headerlink" href="#sets" title="Lien permanent vers ce titre">¶</a></h1>
+<p>A set is an unordered “bag” of unique values.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">panier</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banane&#39;</span><span class="p">]</span>
+<span class="n">panier</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">panier</span><span class="p">)</span>
+<span class="n">panier</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;pomme&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">panier</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;pomme&#39;</span><span class="p">,</span> <span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">a_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">195</span><span class="p">}</span>
+<span class="n">b_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">21</span><span class="p">}</span>
+<span class="c1"># New set with elements common to the set and all others.</span>
+<span class="n">a_set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b_set</span><span class="p">)</span>
+<span class="c1"># new set with elements in the set that are not in the others.</span>
+<span class="n">a_set</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">b_set</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">195</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="classes">
+<h1>Classes<a class="headerlink" href="#classes" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">class</span> <span class="nc">Complex</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Classe représentant un nombre complexe&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">realpart</span><span class="p">,</span> <span class="n">imagpart</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Constructeur de notre classe&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">realpart</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">imagpart</span>
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="s2">&quot;Méthode spéciale pour réutiliser le + de python&quot;</span>
+        <span class="k">return</span> <span class="n">Complex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">i</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Représentation de notre objet par l&#39;interpréteur&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> + i</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">module</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Affiche le module du nombre complexe&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="n">y</span><span class="o">.</span><span class="n">module</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">i1</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Exemple de conteneur</span>
+<span class="k">class</span> <span class="nc">Panier</span><span class="p">:</span>
+    <span class="n">nbpanier</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">()):</span> <span class="c1"># Émulation du constructeur de list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span> <span class="o">=</span> <span class="p">[</span><span class="n">element</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span>
+        <span class="n">Panier</span><span class="o">.</span><span class="n">nbpanier</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Sera utile pour les tests</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">def</span> <span class="nf">__delitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">contenu</span>
+
+<span class="n">monpanier</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">(</span><span class="s2">&quot;banane,pomme&quot;</span><span class="p">)</span>
+<span class="n">tonpanier</span> <span class="o">=</span> <span class="n">Panier</span><span class="p">(</span><span class="s2">&quot;abricot,fraise&quot;</span><span class="p">)</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">monpanier</span><span class="p">)</span>
+<span class="n">monpanier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s2">&quot;banane&quot;</span> <span class="ow">in</span> <span class="n">monpanier</span>
+<span class="n">Panier</span><span class="o">.</span><span class="n">nbpanier</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">Panier</span><span class="p">)</span>
+<span class="n">monpanier</span><span class="o">.</span><span class="vm">__dict__</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;contenu&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;banane&#39;</span><span class="p">,</span> <span class="s1">&#39;pomme&#39;</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flow-control">
+<h1>Flow control<a class="headerlink" href="#flow-control" title="Lien permanent vers ce titre">¶</a></h1>
+<p>If, else, while, try, except ...</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="mi">3</span><span class="o">/</span><span class="mi">0</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">guess</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">guess</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">number</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer : &#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">number</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No, it is a little higher than that&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No, it is a little lower than that&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Congratulations, you guessed it.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(but you do not win any prizes!)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Enter an integer : 23
+No, it is a little lower than that
+Congratulations, you guessed it.
+(but you do not win any prizes!)
+</pre></div>
+</div>
+</div>
+<div class="section" id="decorateurs">
+<h1>Decorateurs<a class="headerlink" href="#decorateurs" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Un moyen simple de modifier le comportement « par défaut » de fonctions.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cache</span><span class="p">(</span><span class="n">function</span><span class="p">):</span>
+  <span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>
+  <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">args</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">args</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">rv</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+      <span class="n">memo</span><span class="p">[</span><span class="n">args</span><span class="p">]</span> <span class="o">=</span> <span class="n">rv</span>
+      <span class="k">return</span> <span class="n">rv</span>
+  <span class="k">return</span> <span class="n">wrapper</span>
+<span class="nd">@cache</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
+  <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">fibonacci</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">9227465</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="les-merveilles-de-la-bibliotheque-standard">
+<h1>Les merveilles de la bibliothèque standard<a class="headerlink" href="#les-merveilles-de-la-bibliotheque-standard" title="Lien permanent vers ce titre">¶</a></h1>
+</div>
+<div class="section" id="collections">
+<h1>Collections<a class="headerlink" href="#collections" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Specialized container datatypes providing alternatives to Python’s
+general purpose built-in containers, dict, list, set, and tuple.</div>
+<div class="line"><a class="reference external" href="https://docs.python.org/3.6/library/collections.html">Documentation</a></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="s2">&quot;cherry&quot;</span><span class="p">,</span><span class="s2">&quot;cherry&quot;</span><span class="p">,</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="s2">&quot;cherry&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;cherry&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="p">[(</span><span class="s1">&#39;cherry&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;banana&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">OrderedDict</span><span class="p">([(</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="regex">
+<h1>Regex<a class="headerlink" href="#regex" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les expressions régulières sont un puissant moyen de rechercher et
+d&#8217;isoler des expressions d&#8217;une chaîne de caractères.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Bonjour je m&#39;appelle Lucas et mon numéro de téléphone lucasberbesson@fabdev.fr est le &quot;</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[\w\.-]+@[\w\.-]+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;lucasberbesson@fabdev.fr&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="time-datetime">
+<h1>Time &amp; Datetime<a class="headerlink" href="#time-datetime" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Contrôler le temps.
+<a class="reference external" href="https://docs.python.org/3/library/datetime.html">documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># datetime(année, mois, jour, heure, minute, seconde, microseconde, fuseau horaire)</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_TIME</span><span class="p">,</span> <span class="s2">&quot;fr_FR&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="n">maintenant</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">maintenant</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">maintenant</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">maintenant</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">maintenant</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;{:%A </span><span class="si">%d</span><span class="s1"> %B %Y %H:%M:%S }&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">maintenant</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2017</span> <span class="mi">4</span> <span class="mi">23</span> <span class="mi">25</span>
+<span class="n">Mardi</span> <span class="mi">25</span> <span class="n">avril</span> <span class="mi">2017</span> <span class="mi">23</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">17</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Find next friday the 13th</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">day</span> <span class="o">==</span> <span class="mi">13</span> <span class="ow">and</span> <span class="n">today</span><span class="o">.</span><span class="n">weekday</span><span class="p">()</span> <span class="o">==</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="n">today</span> <span class="o">+=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">today</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2017</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">13</span> <span class="mi">23</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">18.570794</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="random">
+<h1>Random<a class="headerlink" href="#random" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Générer de l&#8217;aléatoire.
+<a class="reference external" href="https://docs.python.org/3.6/library/random.html">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="c1">#un nombre aléatoire entre</span>
+<span class="n">entier</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entier</span><span class="p">)</span>
+<span class="n">cadavre_exquis</span> <span class="o">=</span> <span class="s1">&#39;Bonjour comment ça va&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">random_word</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">cadavre_exquis</span><span class="p">)</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">cadavre_exquis</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_word</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cadavre_exquis</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">26</span>
+<span class="n">ça</span>
+<span class="p">[</span><span class="s1">&#39;Bonjour&#39;</span><span class="p">,</span> <span class="s1">&#39;ça&#39;</span><span class="p">,</span> <span class="s1">&#39;va&#39;</span><span class="p">,</span> <span class="s1">&#39;comment&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open">
+<h1>Open<a class="headerlink" href="#open" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Open file and return a corresponding file object. If the file cannot be
+opened, an OSError is raised.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/demo.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Hello</span> <span class="n">world</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logs">
+<h1>Logs<a class="headerlink" href="#logs" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">This module defines functions and classes which implement a flexible
+event logging system for applications and libraries.</div>
+<div class="line">Better than prints for you application events.
+<a class="reference external" href="https://docs.python.org/3/library/logging.html">Documentation</a></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;./logs/example.log&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;This message should go to the log file&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;So should this&#39;</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;And this, too&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="os">
+<h1>OS<a class="headerlink" href="#os" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">This module provides a portable way of using operating system
+dependent functionality.</div>
+<div class="line">If you just want to read or write a file see open(), if you want to
+manipulate paths, see the os.path module, and if you want to read all
+the lines in all the files on the command line see the fileinput
+module.</div>
+<div class="line">For creating temporary files and directories see the tempfile module,
+and for high-level file and directory handling see the shutil module.
+<a class="reference external" href="https://docs.python.org/3.6/library/os.html">Documentation</a></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Remplacer récursivement tous les &quot; &quot; par des &quot;_&quot; dans le dossier courant</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">before</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">path</span><span class="p">,</span> <span class="n">folders</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">file</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">folder</span> <span class="ow">in</span> <span class="n">folders</span><span class="p">:</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">folder</span><span class="p">),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">new_name</span><span class="p">))</span>
+
+<span class="n">after</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">before</span><span class="p">,</span><span class="n">after</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">before</span><span class="p">,</span><span class="n">after</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">before</span><span class="p">,</span><span class="s1">&#39;--&gt;&#39;</span><span class="p">,</span><span class="n">after</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">DS_Store</span> <span class="o">--&gt;</span> <span class="o">.</span><span class="n">DS_Store</span>
+<span class="o">.</span><span class="n">git</span> <span class="o">--&gt;</span> <span class="o">.</span><span class="n">git</span>
+<span class="o">.</span><span class="n">gitignore</span> <span class="o">--&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="o">.</span><span class="n">ipynb_checkpoints</span> <span class="o">--&gt;</span> <span class="o">.</span><span class="n">ipynb_checkpoints</span>
+<span class="n">data</span> <span class="o">--&gt;</span> <span class="n">data</span>
+<span class="n">Demo_librairies</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--&gt;</span> <span class="n">Demo_librairies</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">Demo_python</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--&gt;</span> <span class="n">Demo_python</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">docs</span> <span class="o">--&gt;</span> <span class="n">docs</span>
+<span class="n">example</span><span class="o">.</span><span class="n">db</span> <span class="o">--&gt;</span> <span class="n">example</span><span class="o">.</span><span class="n">db</span>
+<span class="n">Improve_python</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--&gt;</span> <span class="n">Improve_python</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">logs</span> <span class="o">--&gt;</span> <span class="n">logs</span>
+<span class="n">passgen</span><span class="o">.</span><span class="n">py</span> <span class="o">--&gt;</span> <span class="n">passgen</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Play</span><span class="o">.</span><span class="n">ipynb</span> <span class="o">--&gt;</span> <span class="n">Play</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">requests</span> <span class="o">--&gt;</span> <span class="n">requests</span>
+<span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="o">--&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">templates</span> <span class="o">--&gt;</span> <span class="n">templates</span>
+<span class="n">tests</span> <span class="o">--&gt;</span> <span class="n">tests</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<h1>JSON<a class="headerlink" href="#json" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Easy to use JSON API.
+<a class="reference external" href="https://docs.python.org/3.6/library/json.html">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="c1"># Json to string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;4&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">},</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;4&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="s2">&quot;6&quot;</span><span class="p">:</span> <span class="mi">7</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">json_string</span> <span class="o">=</span> <span class="s1">&#39;{&quot;first_name&quot;: &quot;Guido&quot;, &quot;last_name&quot;:&quot;Rossum&quot;}&#39;</span>
+<span class="c1"># String to json</span>
+<span class="n">parsed_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">parsed_json</span><span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Guido</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="csv">
+<h1>CSV<a class="headerlink" href="#csv" title="Lien permanent vers ce titre">¶</a></h1>
+<p>The csv module implements classes to read and write tabular data in CSV
+format. <a class="reference external" href="https://docs.python.org/3/library/csv.html">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># write file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/basket.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">filewriter</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">filewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Quantity&#39;</span><span class="p">])</span>
+    <span class="n">filewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Bananas&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">filewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Oranges&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+    <span class="n">filewriter</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+
+<span class="c1"># read file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/basket.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="c1"># read file row by row</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Quantity&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Bananas&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Oranges&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Apples&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="math">
+<h1>Math<a class="headerlink" href="#math" title="Lien permanent vers ce titre">¶</a></h1>
+<p>For Maths ...</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">1.0</span>
+<span class="mf">5.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="smtplib">
+<h1>smtplib<a class="headerlink" href="#smtplib" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">The smtplib module defines an SMTP client session object that can be
+used to send mail to any Internet machine with an SMTP or ESMTP
+listener daemon.</div>
+<div class="line"><a class="reference external" href="https://docs.python.org/3.6/library/smtplib.html">Documentation</a></div>
+</div>
+<p>import smtplib</p>
+<p>server = smtplib.SMTP(&#8216;smtp.gmail.com&#8217;, 587)
+server.starttls()
+server.login(&#8220;YOUR EMAIL ADDRESS&#8221;, &#8220;YOUR PASSWORD&#8221;)</p>
+<p>msg = &#8220;YOUR MESSAGE!&#8221;
+server.sendmail(&#8220;YOUR EMAIL ADDRESS&#8221;, &#8220;THE EMAIL ADDRESS TO SEND TO&#8221;, msg)
+server.quit()</p>
+</div>
+<div class="section" id="sqlite3">
+<h1>sqlite3<a class="headerlink" href="#sqlite3" title="Lien permanent vers ce titre">¶</a></h1>
+<p>SQLite is a C library that provides a lightweight disk-based database
+that doesn’t require a separate server process and allows accessing the
+database using a nonstandard variant of the SQL query language.
+<a class="reference external" href="https://docs.python.org/3.6/library/sqlite3.html">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="c1"># Create table</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;CREATE TABLE stocks</span>
+<span class="s1">                 (date text, trans text, symbol text,qty real, price real)&#39;&#39;&#39;</span><span class="p">)</span>
+    <span class="c1"># Insert a row of data</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO stocks VALUES (&#39;2017-04-26&#39;,&#39;BUY&#39;,&#39;BANANA&#39;, 100,35.14)&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="c1"># Larger example that inserts many records at a time</span>
+<span class="n">purchases</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;2006-03-28&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;APPLE&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">45.00</span><span class="p">),</span>
+             <span class="p">(</span><span class="s1">&#39;2006-04-05&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;ORANGE&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">72.00</span><span class="p">),</span>
+             <span class="p">(</span><span class="s1">&#39;2006-04-06&#39;</span><span class="p">,</span> <span class="s1">&#39;SELL&#39;</span><span class="p">,</span> <span class="s1">&#39;CHERRY&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mf">53.00</span><span class="p">),</span>
+            <span class="p">]</span>
+<span class="n">c</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s1">&#39;INSERT INTO stocks VALUES (?,?,?,?,?)&#39;</span><span class="p">,</span> <span class="n">purchases</span><span class="p">)</span>
+<span class="c1"># Save (commit) the changes</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<span class="c1"># We can also close the connection if we are done with it.</span>
+<span class="c1"># Just be sure any changes have been committed or they will be lost.</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;example.db&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM stocks ORDER BY price&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;2017-04-26&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;BANANA&#39;</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mf">35.14</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-03-28&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;APPLE&#39;</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-03-28&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;APPLE&#39;</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-04-06&#39;</span><span class="p">,</span> <span class="s1">&#39;SELL&#39;</span><span class="p">,</span> <span class="s1">&#39;CHERRY&#39;</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">,</span> <span class="mf">53.0</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-04-06&#39;</span><span class="p">,</span> <span class="s1">&#39;SELL&#39;</span><span class="p">,</span> <span class="s1">&#39;CHERRY&#39;</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">,</span> <span class="mf">53.0</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-04-05&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;ORANGE&#39;</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">&#39;2006-04-05&#39;</span><span class="p">,</span> <span class="s1">&#39;BUY&#39;</span><span class="p">,</span> <span class="s1">&#39;ORANGE&#39;</span><span class="p">,</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="mf">72.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python core modules demo</a></li>
+<li><a class="reference internal" href="#python-est-simple">Python est simple...</a></li>
+<li><a class="reference internal" href="#utilise-par-beaucoup-de-monde">...utilisé par beaucoup de monde</a></li>
+<li><a class="reference internal" href="#gratuit-et-open-source">...gratuit et open source</a></li>
+<li><a class="reference internal" href="#oriente-objet-si-on-veut">...orienté objet...si on veut</a></li>
+<li><a class="reference internal" href="#type-dynamiquement">...typé dynamiquement</a></li>
+<li><a class="reference internal" href="#en-kit-complet">...en kit complet</a></li>
+<li><a class="reference internal" href="#petit-tour-d-horizon">Petit tour d&#8217;horizon</a></li>
+<li><a class="reference internal" href="#strings">Strings</a></li>
+<li><a class="reference internal" href="#lists">Lists</a></li>
+<li><a class="reference internal" href="#tuples">Tuples</a></li>
+<li><a class="reference internal" href="#dicts">Dicts</a></li>
+<li><a class="reference internal" href="#sets">Sets</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#flow-control">Flow control</a></li>
+<li><a class="reference internal" href="#decorateurs">Decorateurs</a></li>
+<li><a class="reference internal" href="#les-merveilles-de-la-bibliotheque-standard">Les merveilles de la bibliothèque standard</a></li>
+<li><a class="reference internal" href="#collections">Collections</a></li>
+<li><a class="reference internal" href="#regex">Regex</a></li>
+<li><a class="reference internal" href="#time-datetime">Time &amp; Datetime</a></li>
+<li><a class="reference internal" href="#random">Random</a></li>
+<li><a class="reference internal" href="#open">Open</a></li>
+<li><a class="reference internal" href="#logs">Logs</a></li>
+<li><a class="reference internal" href="#os">OS</a></li>
+<li><a class="reference internal" href="#json">JSON</a></li>
+<li><a class="reference internal" href="#csv">CSV</a></li>
+<li><a class="reference internal" href="#math">Math</a></li>
+<li><a class="reference internal" href="#smtplib">smtplib</a></li>
+<li><a class="reference internal" href="#sqlite3">sqlite3</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="setup.html" title="Chapitre précédent">Set up your environment</a></li>
+      <li>Next: <a href="Demo_librairies/Demo_librairies.html" title="Chapitre suivant">Requests : super simple requests</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/Demo_python.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Lucas Berbesson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/Demo_python.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

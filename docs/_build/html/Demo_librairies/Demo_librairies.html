@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Requests : super simple requests &#8212; documentation Formation Python 1</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Auto generated docstrings doc" href="../autodoc.html" />
+    <link rel="prev" title="Python core modules demo" href="../Demo_python.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="requests-super-simple-requests">
+<h1>Requests : super simple requests<a class="headerlink" href="#requests-super-simple-requests" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Warning: Recreational use of other HTTP libraries may result in
+dangerous side-effects, including: security vulnerabilities, verbose
+code, reinventing the wheel, constantly reading documentation,
+depression, headaches, or even death.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/users/LucasBerbesson/repos&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">[</span><span class="s1">&#39;language&#39;</span><span class="p">],</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">[</span><span class="s1">&#39;clone_url&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">HTML</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">apifier</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Arduino</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">Bricolage</span><span class="o">-</span><span class="n">numerique</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Arduino</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">Laser</span><span class="o">-</span><span class="n">cat</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Jupyter</span> <span class="n">Notebook</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">mightypython</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Python</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">notification</span><span class="o">-</span><span class="n">box</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Arduino</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">pixelstick</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Batchfile</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">guide</span><span class="o">.</span><span class="n">git</span>
+<span class="n">Arduino</span> <span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">LucasBerbesson</span><span class="o">/</span><span class="n">teatime</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bottle-micro-framework">
+<h1>Bottle : micro framework<a class="headerlink" href="#bottle-micro-framework" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Bottle is a fast, simple and lightweight WSGI micro web-framework for
+Python.</p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">template</span>
+
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1">#run(host=&#39;localhost&#39;, port=8080)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="faker-generate-fake-data">
+<h1>Faker : generate fake data<a class="headerlink" href="#faker-generate-fake-data" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Faker is a Python package that generates fake data for
+you.<a class="reference external" href="https://faker.readthedocs.io/en/latest/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">faker</span> <span class="k">import</span> <span class="n">Faker</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">(</span><span class="n">locale</span><span class="o">=</span><span class="s2">&quot;fr_FR&quot;</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+<span class="n">postcode</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">postcode</span><span class="p">()</span>
+<span class="n">email</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">email</span><span class="p">()</span>
+<span class="n">city</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">city</span><span class="p">()</span>
+<span class="n">color</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">hex_color</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">postcode</span><span class="p">,</span><span class="n">email</span><span class="p">,</span><span class="n">city</span><span class="p">,</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Nicolas</span> <span class="n">Ruiz</span> <span class="mi">55933</span> <span class="n">ferrandjean</span><span class="nd">@voila</span><span class="o">.</span><span class="n">fr</span> <span class="n">Barbier</span> <span class="c1">#ca5dfe</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jinja2-template-engine">
+<h1>Jinja2 : template engine<a class="headerlink" href="#jinja2-template-engine" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Jinja2 is a full featured template engine for
+Python.<a class="reference external" href="http://jinja.pocoo.org/docs/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jinja2</span> <span class="k">import</span> <span class="n">Environment</span><span class="p">,</span> <span class="n">FileSystemLoader</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="s1">&#39;templates&#39;</span><span class="p">))</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">&#39;jinja_demo.html&#39;</span><span class="p">)</span>
+<span class="n">links</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;http://google.com&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;google&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;http://github.com&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;github&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;http://stackoverflow.com/&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;Stack Overflow&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://www.reddit.com/r/Python/&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;Subreddit Python&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://www.lafabriquediy.com/&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;La Fabrique DIY&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;href&quot;</span><span class="p">:</span><span class="s2">&quot;https://www.lemonde.fr/&quot;</span><span class="p">,</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span><span class="s2">&quot;Le monde&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Mes sites préférés&#39;</span><span class="p">,</span> <span class="n">links</span><span class="o">=</span><span class="n">links</span><span class="p">)</span>
+
+
+<span class="c1"># to save the results</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./templates/result.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jupyter-interactive-python-notebook">
+<h1>Jupyter: interactive python notebook<a class="headerlink" href="#jupyter-interactive-python-notebook" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">The Jupyter Notebook is an open-source web application that allows you
+to create and share documents that contain live code, equations,
+visualizations and explanatory text.</div>
+<div class="line"><a class="reference external" href="http://jupyter.org/">Documentation</a></div>
+</div>
+</div>
+<div class="section" id="sphinx-beautiful-python-documentation">
+<h1>Sphinx : beautiful python documentation<a class="headerlink" href="#sphinx-beautiful-python-documentation" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Easy and intelligent and beautiful python documentation.
+<a class="reference external" href="http://www.sphinx-doc.org/en/stable/">Documentation</a></p>
+<p>To get <strong>beautiful</strong> sphinx documentation you need : - to write
+<strong>beautiful docstrings</strong> (check the google ones in <code class="docutils literal"><span class="pre">useful.py</span></code> to get
+inspired) in your python code. - install sphinx - run
+<code class="docutils literal"><span class="pre">sphinx-quickstart</span></code> from your <code class="docutils literal"><span class="pre">/docs</span></code> folder - Edit <code class="docutils literal"><span class="pre">index.rst</span></code>
+and create other <code class="docutils literal"><span class="pre">.rst</span></code>files if you need <a class="reference external" href="https://fr.wikipedia.org/wiki/ReStructuredText">ReStructuredText
+syntax</a> - run
+<code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code></p>
+</div>
+<div class="section" id="beautifulsoup-xml-and-html-parser">
+<h1>BeautifulSoup : XML and HTML parser<a class="headerlink" href="#beautifulsoup-xml-and-html-parser" title="Lien permanent vers ce titre">¶</a></h1>
+<p>A Python library for pulling data out of HTML and XML files.
+<a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.youtube.com/channel/UCV8D6u7_jkuGf_iUvNzXpmg&quot;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">subscribe_btn</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;span&quot;</span><span class="p">,{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span><span class="s2">&quot;yt-subscription-button-subscriber-count-branded-horizontal&quot;</span><span class="p">}):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">subscribe_btn</span><span class="p">,</span> <span class="s2">&quot;abonnés sur La Fabrique DIY&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">102</span> <span class="mi">154</span> <span class="n">abonnés</span> <span class="n">sur</span> <span class="n">La</span> <span class="n">Fabrique</span> <span class="n">DIY</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="xml-xml-parser">
+<h1>XML : XML parser<a class="headerlink" href="#xml-xml-parser" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Simple and efficient API for parsing and creating XML data.
+<a class="reference external" href="https://docs.python.org/3.5/library/xml.etree.elementtree.html">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://www.lemonde.fr/pixels/rss_full.xml&quot;</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span>
+<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">item</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="n">root</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s2">&quot;item&quot;</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;a href=</span><span class="si">{}</span><span class="s1"> target=&quot;_blank&quot;&gt;</span><span class="si">{}</span><span class="s1">&lt;/a&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)))</span>
+</pre></div>
+</div>
+<a href=http://www.lemonde.fr/police-justice/article/2017/04/25/champs-elysees-l-interieur-saisit-la-justice-apres-des-commentaires-homophobes-visant-le-policier-mort_5117427_1653578.html target="_blank">Champs-Elysées : l’intérieur saisit la justice après des commentaires homophobes visant le policier mort</a><a href=http://www.lemonde.fr/pixels/article/2017/04/25/contre-les-fausses-informations-google-retouche-son-moteur-de-recherche_5117424_4408996.html target="_blank">Contre les fausses informations, Google retouche son moteur de recherche</a><a href=http://www.lemonde.fr/pixels/article/2017/04/25/en-thailande-une-scene-d-horreur-diffusee-en-direct-sur-facebook_5117404_4408996.html target="_blank">En Thaïlande, une scène d’horreur diffusée en direct sur Facebook</a><a href=http://www.lemonde.fr/pixels/article/2017/04/25/sur-internet-l-extreme-droite-anglophone-tente-peniblement-de-s-organiser-pour-nuire-a-macron_5117362_4408996.html target="_blank">Sur Internet, l’extrême droite anglophone tente péniblement de s’organiser pour nuire à Macron</a><a href=http://www.lemonde.fr/actualite-medias/article/2017/04/25/avec-wikitribune-wikipedia-veut-redessiner-le-paysage-mediatique_5117336_3236.html target="_blank">Wikitribune entend redessiner le paysage médiatique</a></div>
+<div class="section" id="pandas-excel-in-python">
+<h1>Pandas : excel in python<a class="headerlink" href="#pandas-excel-in-python" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pandas is an open source, BSD-licensed library providing
+high-performance, easy-to-use data structures and data analysis tools
+for the Python programming
+language.<a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/election-presidentielle-2017.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tailel du tableau: &quot;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Nombre de voix&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span><span class="s2">&quot;personnes ont voté en Ile-de-france dimanche dernier&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Tailel</span> <span class="n">du</span> <span class="n">tableau</span><span class="p">:</span>  <span class="p">(</span><span class="mi">14256</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="mi">5632334</span> <span class="n">personnes</span> <span class="n">ont</span> <span class="n">voté</span> <span class="n">en</span> <span class="n">Ile</span><span class="o">-</span><span class="n">de</span><span class="o">-</span><span class="n">france</span> <span class="n">dimanche</span> <span class="n">dernier</span>
+</pre></div>
+</div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Code Région</th>
+      <th>Code Région 3</th>
+      <th>Région</th>
+      <th>Code Département</th>
+      <th>Code Département</th>
+      <th>Code Département 3</th>
+      <th>Département</th>
+      <th>Tour</th>
+      <th>Code Commune</th>
+      <th>Commune</th>
+      <th>Nom Candidat</th>
+      <th>Prénom Candidat</th>
+      <th>Civilité Candidat</th>
+      <th>Numéro Panneau Candidat</th>
+      <th>Nombre de voix</th>
+      <th>Rapport Inscrit</th>
+      <th>rapportexprime</th>
+      <th>Code Insee</th>
+      <th>geom</th>
+      <th>geo_point_2d</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+      <td>11</td>
+      <td>Île-de-France</td>
+      <td>75</td>
+      <td>75</td>
+      <td>75</td>
+      <td>Paris</td>
+      <td>1</td>
+      <td>056AR01</td>
+      <td>Paris 1er arrondissement</td>
+      <td>DUPONT-AIGNAN</td>
+      <td>Nicolas</td>
+      <td>M.</td>
+      <td>1</td>
+      <td>128</td>
+      <td>1.19</td>
+      <td>1.42</td>
+      <td>75101</td>
+      <td>{"type": "Polygon", "coordinates": [[[2.344559...</td>
+      <td>48.8625262113, 2.33630086089</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11</td>
+      <td>11</td>
+      <td>Île-de-France</td>
+      <td>75</td>
+      <td>75</td>
+      <td>75</td>
+      <td>Paris</td>
+      <td>1</td>
+      <td>056AR01</td>
+      <td>Paris 1er arrondissement</td>
+      <td>LE PEN</td>
+      <td>Marine</td>
+      <td>Mme</td>
+      <td>2</td>
+      <td>443</td>
+      <td>4.11</td>
+      <td>4.91</td>
+      <td>75101</td>
+      <td>{"type": "Polygon", "coordinates": [[[2.344559...</td>
+      <td>48.8625262113, 2.33630086089</td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Keep interesting columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Nom Candidat&#39;</span><span class="p">,</span><span class="s1">&#39;Commune&#39;</span><span class="p">,</span><span class="s1">&#39;rapportexprime&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dataset contains </span><span class="si">{}</span><span class="s2"> communes&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Commune&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()))</span>
+<span class="c1"># Only keep Paris districts</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Commune&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Paris &quot;</span><span class="p">)]</span>
+<span class="c1"># Change datagrame index</span>
+<span class="n">resultats</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Nom Candidat&#39;</span><span class="p">)</span>
+<span class="c1"># Print last 10 rows</span>
+<span class="n">resultats</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Dataset</span> <span class="n">contains</span> <span class="mi">1292</span> <span class="n">communes</span>
+</pre></div>
+</div>
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Commune</th>
+      <th>rapportexprime</th>
+    </tr>
+    <tr>
+      <th>Nom Candidat</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CHEMINADE</th>
+      <td>Paris 20eme arrondissement</td>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <th>LASSALLE</th>
+      <td>Paris 20eme arrondissement</td>
+      <td>0.54</td>
+    </tr>
+    <tr>
+      <th>MÉLENCHON</th>
+      <td>Paris 20eme arrondissement</td>
+      <td>31.83</td>
+    </tr>
+    <tr>
+      <th>ASSELINEAU</th>
+      <td>Paris 20eme arrondissement</td>
+      <td>0.96</td>
+    </tr>
+    <tr>
+      <th>FILLON</th>
+      <td>Paris 20eme arrondissement</td>
+      <td>12.78</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+<div class="section" id="matplotlib-matlab-like-plot">
+<h1>Matplotlib : Matlab-like plot<a class="headerlink" href="#matplotlib-matlab-like-plot" title="Lien permanent vers ce titre">¶</a></h1>
+<p>MATLAB-like plotting
+framework.<a class="reference external" href="http://matplotlib.org/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="c1"># Group by commune</span>
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">resultats</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Commune&#39;</span><span class="p">])</span>
+<span class="c1"># Prepare giant plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">group</span><span class="p">),</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">grouped</span><span class="p">,</span> <span class="n">axs</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
+    <span class="n">group</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;rapportexprime&quot;</span><span class="p">)</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s2">&quot;rapportexprime&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/output_19_0.png" src="../_images/output_19_0.png" />
+</div>
+<div class="section" id="scikit-learn-machine-learning">
+<h1>Scikit learn : Machine learning<a class="headerlink" href="#scikit-learn-machine-learning" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Simple and efficient tools for data mining and data analysis
+<a class="reference external" href="http://scikit-learn.org/stable/">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Author: Gael Varoquaux &lt;gael dot varoquaux at normalesup dot org&gt;</span>
+<span class="c1"># License: BSD 3 clause</span>
+
+<span class="c1"># Standard scientific Python imports</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Import datasets, classifiers and performance metrics</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">svm</span><span class="p">,</span> <span class="n">metrics</span>
+
+<span class="c1"># The digits dataset</span>
+<span class="n">digits</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_digits</span><span class="p">()</span>
+
+<span class="c1"># The data that we are interested in is made of 8x8 images of digits, let&#39;s</span>
+<span class="c1"># have a look at the first 4 images, stored in the `images` attribute of the</span>
+<span class="c1"># dataset.  If we were working from image files, we could load them using</span>
+<span class="c1"># matplotlib.pyplot.imread.  Note that each image must have the same size. For these</span>
+<span class="c1"># images, we know which digit they represent: it is given in the &#39;target&#39; of</span>
+<span class="c1"># the dataset.</span>
+<span class="n">images_and_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images_and_labels</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Training: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">label</span><span class="p">)</span>
+
+<span class="c1"># To apply a classifier on this data, we need to flatten the image, to</span>
+<span class="c1"># turn the data in a (samples, feature) matrix:</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Create a classifier: a support vector classifier</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+
+<span class="c1"># We learn the digits on the first half of the digits</span>
+<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)],</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)])</span>
+
+<span class="c1"># Now predict the value of the digit on the second half:</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="mi">2</span><span class="p">):]</span>
+<span class="n">predicted</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="mi">2</span><span class="p">):])</span>
+
+<span class="n">images_and_predictions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="mi">2</span><span class="p">):],</span> <span class="n">predicted</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">prediction</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images_and_predictions</span><span class="p">[:</span><span class="mi">4</span><span class="p">]):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">index</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray_r</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Prediction: </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prediction</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../_images/output_21_0.png" src="../_images/output_21_0.png" />
+</div>
+<div class="section" id="django-the-best-web-framework">
+<h1>Django : the best web framework<a class="headerlink" href="#django-the-best-web-framework" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Django is a high-level Python Web framework that encourages rapid
+development and clean, pragmatic design.</div>
+<div class="line">Built by experienced developers, it takes care of much of the hassle
+of Web development, so you can focus on writing your app without
+needing to reinvent the wheel. It’s free and open source.
+<a class="reference external" href="https://docs.djangoproject.com/en/dev/">Documentation</a>.
+<a class="reference external" href="http://www.lafabriquediy.com/">Demo</a></div>
+</div>
+</div>
+<div class="section" id="django-rest-api-builder">
+<h1>Django REST : api builder<a class="headerlink" href="#django-rest-api-builder" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Django REST framework is a powerful and flexible toolkit for building
+Web APIs. <a class="reference external" href="http://www.django-rest-framework.org/">Documentation</a>.
+<a class="reference external" href="https://spotit.fr/api/">Demo</a></p>
+</div>
+<div class="section" id="flask-advanced-microframework">
+<h1>Flask : advanced microframework<a class="headerlink" href="#flask-advanced-microframework" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
+intentions. <a class="reference external" href="http://flask.pocoo.org/">Documentation</a></p>
+</div>
+<div class="section" id="pylint-code-analysis">
+<h1>Pylint : code analysis<a class="headerlink" href="#pylint-code-analysis" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="line-block">
+<div class="line">Code analyisis for python <a class="reference external" href="https://www.pylint.org/">Documentation</a>.</div>
+<div class="line">Check the <code class="docutils literal"><span class="pre">passgen.py</span></code> code by running <code class="docutils literal"><span class="pre">pylint</span> <span class="pre">passgen.py</span></code> and try
+to improve it !</div>
+</div>
+</div>
+<div class="section" id="pytest-tests">
+<h1>Pytest : tests<a class="headerlink" href="#pytest-tests" title="Lien permanent vers ce titre">¶</a></h1>
+<p>The pytest framework makes it easy to write small tests, yet scales to
+support complex functional testing for applications and
+libraries.<a class="reference external" href="https://docs.pytest.org/en/latest/">Documentation</a></p>
+<p>From your project directory simply run <code class="docutils literal"><span class="pre">pytest</span></code> to run all
+<code class="docutils literal"><span class="pre">test_*.py</span></code> files</p>
+</div>
+<div class="section" id="gspread-google-spreadsheet-api">
+<h1>Gspread : Google spreadsheet api<a class="headerlink" href="#gspread-google-spreadsheet-api" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Google spreadsheet python API
+<a class="reference external" href="https://github.com/burnash/gspread">Documentation</a></p>
+<div class="code ipython3 highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="k">import</span> <span class="n">ServiceAccountCredentials</span>
+
+<span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://spreadsheets.google.com/feeds&#39;</span><span class="p">]</span>
+<span class="c1"># to get your own client_secret.json credentials goto : http://gspread.readthedocs.io/en/latest/oauth2.html</span>
+<span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s1">&#39;data/client_secret.json&#39;</span><span class="p">,</span> <span class="n">scope</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+
+<span class="c1"># Find a workbook by name and open the first sheet</span>
+<span class="n">sheet</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sheet1</span>
+
+<span class="c1"># Extract and print all of the values</span>
+<span class="n">list_of_hashes</span> <span class="o">=</span> <span class="n">sheet</span><span class="o">.</span><span class="n">get_all_records</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_of_hashes</span><span class="p">)</span>
+
+<span class="c1">#Append the current date and time</span>
+
+<span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sheet</span><span class="o">.</span><span class="n">insert_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Requests : super simple requests</a></li>
+<li><a class="reference internal" href="#bottle-micro-framework">Bottle : micro framework</a></li>
+<li><a class="reference internal" href="#faker-generate-fake-data">Faker : generate fake data</a></li>
+<li><a class="reference internal" href="#jinja2-template-engine">Jinja2 : template engine</a></li>
+<li><a class="reference internal" href="#jupyter-interactive-python-notebook">Jupyter: interactive python notebook</a></li>
+<li><a class="reference internal" href="#sphinx-beautiful-python-documentation">Sphinx : beautiful python documentation</a></li>
+<li><a class="reference internal" href="#beautifulsoup-xml-and-html-parser">BeautifulSoup : XML and HTML parser</a></li>
+<li><a class="reference internal" href="#xml-xml-parser">XML : XML parser</a></li>
+<li><a class="reference internal" href="#pandas-excel-in-python">Pandas : excel in python</a></li>
+<li><a class="reference internal" href="#matplotlib-matlab-like-plot">Matplotlib : Matlab-like plot</a></li>
+<li><a class="reference internal" href="#scikit-learn-machine-learning">Scikit learn : Machine learning</a></li>
+<li><a class="reference internal" href="#django-the-best-web-framework">Django : the best web framework</a></li>
+<li><a class="reference internal" href="#django-rest-api-builder">Django REST : api builder</a></li>
+<li><a class="reference internal" href="#flask-advanced-microframework">Flask : advanced microframework</a></li>
+<li><a class="reference internal" href="#pylint-code-analysis">Pylint : code analysis</a></li>
+<li><a class="reference internal" href="#pytest-tests">Pytest : tests</a></li>
+<li><a class="reference internal" href="#gspread-google-spreadsheet-api">Gspread : Google spreadsheet api</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../Demo_python.html" title="Chapitre précédent">Python core modules demo</a></li>
+      <li>Next: <a href="../autodoc.html" title="Chapitre suivant">Auto generated docstrings doc</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/Demo_librairies/Demo_librairies.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Lucas Berbesson.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/Demo_librairies/Demo_librairies.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
