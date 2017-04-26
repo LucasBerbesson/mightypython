@@ -6,10 +6,38 @@
 Mighty Python
 ============================================
 
-The purpose of this guide is to show what python can do and start to **learn by example**.
-You won't find a list of every Python library available here.
-Rather, you'll find a nice concise list of highly recommended options.
+Mighty Python is a list of Python micro demos (no more than 10 lines).
 
-.. include:: install.rst.inc
+Set up
+-------------------------
 
-.. include:: code.rst.inc
+.. toctree::
+   :maxdepth: 2
+
+   setup
+
+
+Python modules mini demos
+-------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   Demo_python
+
+
+Python libraries mini demos
+---------------------------
+
+.. toctree::
+  :maxdepth: 2
+
+  Demo_librairies/Demo_librairies.rst
+
+Sphinx and docstrings mini demo
+-------------------------------
+
+.. toctree::
+  :maxdepth: 2
+
+  autodoc

@@ -1,5 +1,5 @@
 Set up your environment
-===============================
+-----------------------
 
 To run the notebook and the examples you should have python 3 and pip installed
 on your computer.
@@ -45,9 +45,3 @@ To launch the notebook simply run :
 .. code-block:: console
 
     jupyter notebook
-
-
-
-
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
