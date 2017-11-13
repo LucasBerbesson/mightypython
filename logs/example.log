@@ -7,3 +7,40 @@
 2017-04-26 11:39:27,528 This message should go to the log file
 2017-04-26 11:39:27,529 So should this
 2017-04-26 11:39:27,529 And this, too
+2017-11-12 20:44:18,636 This message should go to the log file
+2017-11-12 20:44:18,640 So should this
+2017-11-12 20:44:18,640 And this, too
+2017-11-12 20:44:27,242 This message should go to the log file
+2017-11-12 20:44:27,243 So should this
+2017-11-12 20:44:27,243 And this, too
+2017-11-12 20:44:32,446 This message should go to the log file
+2017-11-12 20:44:32,447 So should this
+2017-11-12 20:44:32,447 And this, too
+2017-11-12 20:44:41,597 This message should go to the log file
+2017-11-12 20:44:41,597 So should this
+2017-11-12 20:44:41,598 And this, too
+2017-11-12 20:45:51,984 Starting new HTTP connection (1): api.open-notify.org
+2017-11-12 20:45:52,436 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:46:26,286 This message should go to the log file
+2017-11-13 11:46:26,287 So should this
+2017-11-13 11:46:26,287 And this, too
+2017-11-13 11:50:27,875 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:50:28,218 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:50:33,077 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:50:33,401 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:50:37,547 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:50:37,882 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:50:42,634 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:50:42,949 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:50:53,523 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:50:53,831 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:51:04,861 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:51:05,184 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:51:31,514 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:51:31,850 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:51:45,357 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:51:45,695 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:52:05,980 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:52:06,300 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
+2017-11-13 11:52:38,407 Starting new HTTP connection (1): api.open-notify.org
+2017-11-13 11:52:38,727 http://api.open-notify.org:80 "GET /astros.json HTTP/1.1" 200 311
